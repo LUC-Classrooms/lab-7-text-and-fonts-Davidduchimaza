@@ -2,16 +2,22 @@
  * Lab 7 - Text
  */
 
+let phrase1 = " An apple a day....";
+let phrase2 = " keeps the doctor away! ";
+
 function setup() {
   createCanvas(640, 240);
-  textFont("Arial");
+  textFont("Comforta");
 }
 
 function draw() {
   background(200);
-  textSize(16);
-  text("one small step for a man ...", 20, 60);
-  textSize(32);
-  text("one giant leap for mankind.", 20, 160);
-
+  textSize(24);
+  if (mouseIsPressed) {
+    textSize(32);
+    text(phrase2, 20, 160);
+  } else {
+    textSize(24);
+    text(phrase1, 20, 60);
+  }
 }
